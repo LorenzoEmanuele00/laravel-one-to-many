@@ -11,6 +11,15 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
+            <div class="mb-3 w-25 mx-auto">
+                <label for="type_id">Seleziona categoria</label>
+                <select class="form-select" aria-label="Default select example" name="type_id" id="type_id">
+                    <option value="">Nessun Tipo</option>
+                    @foreach ($types as $type)
+                        <option value="{{$type->id}}">{{$type->name}}</option>
+                    @endforeach
+                </select>
+            </div>
             <div class="mb-3 w-50 mx-auto">
                 <label for="description" class="form-label">Descrizione</label>
                 <textarea class="form-control" id="description" rows="3" name="description">{{ old('description') }}</textarea>
