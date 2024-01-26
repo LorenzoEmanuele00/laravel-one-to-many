@@ -12,7 +12,7 @@
                 @enderror
             </div>
             <div class="mb-3 w-25 mx-auto">
-                <label for="type_id">Seleziona categoria</label>
+                <label for="type_id">Seleziona Tipo</label>
                 <select class="form-select" aria-label="Default select example" name="type_id" id="type_id">
                     <option value="">Nessun Tipo</option>
                     @foreach ($types as $type)
